@@ -2,3 +2,4 @@ wheel
 sphinx>=3.0.0
 sphinx-autobuild
 sphinx_git
+sphinx_rtd_theme

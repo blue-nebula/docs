@@ -1,0 +1,4 @@
+wheel
+sphinx>=3.0.0
+sphinx-autobuild
+sphinx_git

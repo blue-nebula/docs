@@ -10,6 +10,7 @@ These docs contain information for users, content creators (e.g., mappers), deve
 
 
 .. toctree::
+   reference/index
    :maxdepth: 2
    :caption: Contents:
 

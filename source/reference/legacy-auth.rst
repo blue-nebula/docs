@@ -47,4 +47,5 @@ The general workflow is described in the sequence diagram below.
 
 .. uml:: auth-workflow-client.puml
 
+Whenever a :code:`failauth` message is sent, the process is aborted by the server.
 

@@ -7,16 +7,17 @@ participant server #lightblue
 participant master #orange
 
 
-client -> server: N_TRYAUTH
+client -> server: N_AUTHTRY
 
 server -> master: reqauth
 
 master -> master: checks\nuser db
 
 server <-[#red]- master: failauth (if no user found)
+note left: server sends an\n"identification failed"\nmessage to the client
 server <[#green]- master: chalauth (if user found)
 
-client <- server: N_AUTHCHAL
+client <[#green]- server: N_AUTHCHAL
 
 client -> client: calculate\nanswer\nchallenge
 
@@ -27,6 +28,10 @@ server -> master: confauth %u %s
 master -> master: checkchallenge
 
 master -[#red]-> server: failauth (if check fails)
+note left: server sends an\n"identification failed"\nmessage to the client
 server <[#green]- master: succauth %s %s %s
+
+server -[#green]> client: setprivilege()
+note over client: all clients are informed\nthat the user was identified\nand was assigned a role
 
 @enduml

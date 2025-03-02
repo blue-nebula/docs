@@ -5,7 +5,7 @@ on: [push]
 env:
   REGISTRY: ghcr.io
   # make sure the name is lowercase, otherwise Docker won't accept it
-  IMAGE_NAME: appimage/docs.appimage.org
+  IMAGE_NAME: blue-nebula/docs
 
 jobs:
   build:

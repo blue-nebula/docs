@@ -22,7 +22,7 @@ RUN poetry run make html
 
 FROM nginx:alpine
 
-LABEL org.opencontainers.image.source="https://github.com/"
+LABEL org.opencontainers.image.source="https://github.com/blue-nebula/docs"
 
 COPY docker/nginx.conf /etc/nginx/
 

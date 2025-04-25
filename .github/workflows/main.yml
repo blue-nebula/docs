@@ -9,6 +9,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Install dependencies
-        run: sudo apt-get update && sudo apt-get install pipx && pipx install poetry
+        run: sudo apt-get update && sudo apt-get install pipx && pipx install poetry && poetry install
       - name: Link check
-        run: ./make.sh linkcheck
+        run: poetry run make linkcheck

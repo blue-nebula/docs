@@ -1,4 +1,4 @@
-FROM python:3-alpine as builder
+FROM python:3-alpine AS builder
 
 RUN apk add --no-cache gcc musl-dev libffi-dev rust cargo openssl-dev poetry make git bash plantuml
 

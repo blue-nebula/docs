@@ -8,7 +8,7 @@ readme = "README.md"
 package-mode = false
 
 [tool.poetry.dependencies]
-python = "^3.12"
+python = "^3.12,<=3.13"
 sphinx = ">=7"
 sphinx-autobuild = "^2024.10.3"
 sphinx-git = "^11.0.0"
